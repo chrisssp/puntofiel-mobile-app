@@ -1,4 +1,8 @@
-# PuntoFiel — Plataforma de Fidelización Basada en Roles
+# PuntoFiel — Plataforma de Fidelización Basada en Roles para Negocios Locales
+
+<p align="center">
+  <img src="assets/logos/logo-variante-horizontal-ligth.png" alt="PuntoFiel Logo" width="150"/>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/React_Native-20232A?logo=react&logoColor=61DAFB" alt="React Native">
@@ -11,7 +15,7 @@
 </p>
 
 <p align="center">
-  <em>Plataforma de fidelización para negocios locales con autenticación por roles y sistema de puntos vía QR</em>
+  <em>Los clientes ganan y canjean recompensas con QR, mientras los dueños administran personal, catálogo, promociones y auditan actividad con claridad.</em>
 </p>
 
 <p align="center">
@@ -20,18 +24,18 @@
 
 ---
 
-## Acerca de PuntoFiel
+## Acerca de
 
-Una aplicación móvil de fidelización basada en roles para negocios locales. Los clientes ganan y canjean recompensas con códigos QR, mientras que los dueños administran personal, catálogo, promociones y auditan actividad. Diseñada para equilibrar el compromiso del cliente con el control administrativo, haciendo que la fidelización sea simple para los usuarios y útil para los negocios.
+Aplicación móvil de fidelización basada en roles para negocios locales. Los clientes ganan y canjean recompensas con códigos QR, mientras que los dueños administran personal, productos, recompensas, rifas y promociones. Diseñada para equilibrar el compromiso del cliente con el control administrativo diario.
 
 ## Funcionalidades
 
 - Registro y autenticación para clientes y dueños de negocios
-- Generación y escaneo de códigos QR para acumulación de puntos
+- Generación y escaneo de códigos QR para acumulación de puntos sin contacto
 - Sistema de recompensas gestionado por cada negocio
-- Panel de control para que los negocios vean sus clientes más leales
-- Roles: clientes, empleados y dueños con diferentes permisos
-- Seguridad con RLS (Row Level Security) de PostgreSQL
+- Panel de control para dueños con información de clientes leales
+- Acceso basado en roles: clientes, empleados y dueños
+- Seguridad de datos con PostgreSQL Row Level Security (RLS)
 
 ## Stack Tecnológico
 
@@ -42,6 +46,7 @@ Una aplicación móvil de fidelización basada en roles para negocios locales. L
 | UI | gluestack-ui + NativeWind |
 | Estado | TanStack Query + Zustand |
 | Backend | Supabase (Auth, PostgreSQL, RLS) |
+| Arquitectura | Clean Architecture |
 | Linter | Biome |
 
 ## Inicio rápido
