@@ -1,92 +1,70 @@
-# PuntoFiel
+# PuntoFiel — Role-Based Loyalty Platform for Local Businesses
 
 <p align="center">
   <img src="assets/logos/logo-variante-horizontal-ligth.png" alt="PuntoFiel Logo" width="150"/>
 </p>
 
 <p align="center">
-  Una aplicación móvil de fidelización para negocios locales, construida con React Native y Supabase.
+  <img src="https://img.shields.io/badge/React_Native-20232A?logo=react&logoColor=61DAFB" alt="React Native">
+  <img src="https://img.shields.io/badge/Expo-000020?logo=expo&logoColor=white" alt="Expo">
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white" alt="Supabase">
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/gluestack--ui-00A3FF?logo=styled-components&logoColor=white" alt="gluestack-ui">
+  <img src="https://img.shields.io/badge/TanStack_Query-FF4154?logo=react-query&logoColor=white" alt="TanStack Query">
+  <img src="https://img.shields.io/badge/License-GPL_v3-0298c3?logo=gnu&logoColor=white" alt="GPL v3">
+</p>
+
+<p align="center">
+  <em>Customers earn and redeem rewards with QR, while owners manage staff, catalog, promotions, and audit activity with clarity.</em>
+</p>
+
+<p align="center">
+  <a href="README.md">🇬🇧 English</a> · <a href="README.es.md">🇪🇸 Español</a>
 </p>
 
 ---
 
-## ✨ Características principales
+## About
 
-* *Registro y autenticación* para clientes y dueños de negocios.
-* *Generación y escaneo de códigos QR* para una acumulación de puntos rápida y sin contacto.
-* *Sistema de recompensas* gestionado por cada negocio.
-* *Panel de control* para que los negocios puedan ver a sus clientes más leales.
-* *Seguridad de datos* implementada con RLS (Row Level Security) de PostgreSQL.
+A role-based loyalty mobile app for local businesses. Customers earn and redeem rewards with QR codes, while owners manage staff, products, rewards, raffles, and promotions. It balances customer engagement with day-to-day administrative control, making loyalty simple for users and useful for businesses.
 
----
+## Features
 
-## 🛠️ Stack tecnológico
+- Registration and authentication for customers and business owners
+- QR code generation and scanning for contactless point accumulation
+- Reward system managed by each business
+- Owner dashboard with customer loyalty insights
+- Role-based access: customers, employees, and owners
+- Data security with PostgreSQL Row Level Security (RLS)
 
-Este proyecto utiliza un stack moderno, escalable y enfocado en la productividad.
+## Tech Stack
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-![React Native](https://img.shields.io/badge/React_Native-20232A?logo=react&logoColor=61DAFB)
-![Expo](https://img.shields.io/badge/Expo-000020?logo=expo&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
-![gluestack-ui](https://img.shields.io/badge/gluestack--ui-00A3FF?logo=styled-components&logoColor=white)
-![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?logo=react-query&logoColor=white)
-![Zustand](https://img.shields.io/badge/Zustand-000000?logo=zustand&logoColor=white)
-![Biome](https://img.shields.io/badge/Biome-60A5FA?logo=biome&logoColor=white)
+| Layer | Technology |
+|-------|-----------|
+| Framework | React Native + Expo |
+| Language | TypeScript |
+| UI | gluestack-ui + NativeWind |
+| State | TanStack Query + Zustand |
+| Backend | Supabase (Auth, PostgreSQL, RLS) |
+| Architecture | Clean Architecture |
+| Linter | Biome |
 
----
-
-## 📂 Arquitectura del proyecto
-
-Utilizamos **Arquitectura Limpia (Clean Architecture)** para separar la lógica de negocio de los detalles de implementación. La estructura principal del código se encuentra en la carpeta `src`:
-
-```
-
-src/
-├── core/             \# Lógica de negocio pura (agnóstica al framework).
-├── infrastructure/   \# Conexión con servicios externos (Supabase).
-└── presentation/     \# Capa de UI (React Native, pantallas, componentes).
-
-````
-*La carpeta `app/` en la raíz es utilizada exclusivamente por **Expo Router** para definir las rutas.*
-
----
-
-## 🚀 Empezando (guía de instalación)
-
-Sigue estos pasos para levantar el entorno de desarrollo local.
-
-**1. Clonar el repositorio**
-```bash
-git clone https://github.com/chrisdev-ts/puntofiel-mobileapp
-cd puntofiel-mobileapp
-````
-
-**2. Instalar dependencias**
-Usamos `pnpm` como gestor de paquetes.
+## Quick Start
 
 ```bash
+git clone https://github.com/chrisssp/puntofiel-mobile-app.git
+cd puntofiel-mobile-app
 pnpm install
-```
-
-**3. Configurar variables de entorno**
-Crea una copia del archivo de ejemplo `.env.example` y renómbrala a `.env`. Luego, rellena las claves de tu proyecto de Supabase.
-
-```bash
 cp .env.example .env
-```
-
-```ini
-# Contenido de .env
-EXPO_PUBLIC_SUPABASE_URL="your_supabase_url_here"
-EXPO_PUBLIC_SUPABASE_ANON_KEY="your_supabase_anon_key_here"
-```
-
-**4. Iniciar el servidor de desarrollo**
-Este comando iniciará el servidor de Metro de Expo.
-
-```bash
 pnpm start
 ```
 
-Ahora puedes escanear el código QR con la aplicación **Expo Go** en tu teléfono (iOS o Android) para abrir la app.
+## License
+
+GPL v3 — see [LICENSE](LICENSE) for details.
+
+## Acknowledgments
+
+**Authors:**
+
+- [@chrisssp](https://github.com/chrisssp) — Christian Serrano
