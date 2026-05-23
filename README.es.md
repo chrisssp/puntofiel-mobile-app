@@ -37,6 +37,19 @@ Aplicación móvil de fidelización basada en roles para negocios locales. Los c
 - Acceso basado en roles: clientes, empleados y dueños
 - Seguridad de datos con PostgreSQL Row Level Security (RLS)
 
+## Arquitectura
+
+El proyecto sigue **Arquitectura Limpia (Clean Architecture)** para separar la lógica de negocio de los detalles de implementación:
+
+```
+src/
+├── core/             # Lógica de negocio pura (agnóstica al framework)
+├── infrastructure/   # Conexión con servicios externos (Supabase)
+└── presentation/     # Capa de UI (React Native, pantallas, componentes)
+```
+
+*La carpeta `app/` en la raíz es utilizada exclusivamente por **Expo Router** para definir las rutas.*
+
 ## Stack Tecnológico
 
 | Capa | Tecnología |
