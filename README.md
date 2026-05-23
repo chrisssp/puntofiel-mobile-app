@@ -37,6 +37,19 @@ A role-based loyalty mobile app for local businesses. Customers earn and redeem 
 - Role-based access: customers, employees, and owners
 - Data security with PostgreSQL Row Level Security (RLS)
 
+## Architecture
+
+The project follows **Clean Architecture** to separate business logic from implementation details:
+
+```
+src/
+├── core/             # Pure business logic (framework-agnostic)
+├── infrastructure/   # External service connections (Supabase)
+└── presentation/     # UI layer (React Native, screens, components)
+```
+
+*The `app/` folder at the root is used exclusively by **Expo Router** for route definitions.*
+
 ## Tech Stack
 
 | Layer | Technology |
